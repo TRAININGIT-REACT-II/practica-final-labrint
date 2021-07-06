@@ -28,7 +28,7 @@ const FormRegister = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     if (validarFormulario(formState.username,formState.password)){
-      fetch("/api/register", {
+      fetch(API_URL+"/register", {
         method: "POST",
         body: JSON.stringify({username:formState.username,password:formState.password}),
         headers: {

@@ -27,7 +27,7 @@ const EditNote = () => {
     });
   };
   const fetchNote = () => {
-    fetch("/api/notes/"+params.id, {
+    fetch(API_URL+"/notes/"+params.id, {
       method: "GET",
       headers: {
         "Content-type": "application/json; charset=UTF-8",
@@ -41,7 +41,7 @@ const EditNote = () => {
 
   const onSubmitNote = (e) => {
     e.preventDefault();
-    fetch("/api/notes/"+params.id, {
+    fetch(API_URL+"/notes/"+params.id, {
       method: "PUT",
       body: JSON.stringify({
         title: formState.title,

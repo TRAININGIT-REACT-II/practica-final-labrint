@@ -27,7 +27,7 @@ const FormLogin = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    fetch("/api/login", {
+    fetch(API_URL+"/login", {
       method: "POST",
       body: JSON.stringify({username:formState.username,password:formState.password}),
       headers: {

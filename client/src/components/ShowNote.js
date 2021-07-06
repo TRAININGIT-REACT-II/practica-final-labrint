@@ -15,7 +15,7 @@ const ShowNote = () => {
   const closeModal = () => modal.close();
 
   const fetchNote = () => {
-    fetch("/api/notes/"+params.id, {
+    fetch(API_URL+"/notes/"+params.id, {
       method: "GET",
       headers: {
         "Content-type": "application/json; charset=UTF-8",

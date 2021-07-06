@@ -1,18 +1,26 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const { resolve } = require("path");
-
+const { DefinePlugin } = require("webpack");
 /**
  * Configuración para compilar el cliente de la práctica final
  */
-module.exports = {
+ const apiURL= process.env.API_URL || '/api';
+ const config = {
   // Para simplificar, asignamos el contexto a la carpeta actual
   context: resolve(__dirname),
   // Punto de entrada de la aplicación
-  entry: "./index.js",
+  entry: resolve(__dirname, "./index.js"),
   output: {
     // Guardamos la aplicación en esta carpeta. En este caso, el path
     // tiene que ser absoluto
     path: resolve(__dirname, "./dist"),
+    // Fuerza a que los distintos ficheros se sirvan partiendo del directorio raiz /.
+    // Si no se fuerza este comportamiento, al utilizar react-router y definir rutas,
+    // webpack utilizara URLs relativas como /mi-ruta/main.js causando errores.
+    // Modificamos el nombre para incluir el hash del contenido y permitir una cache
+    // de permanente
+    filename: "[name].[contenthash].js",
+    chunkFilename: "[name].[contenthash].chunk.js",
     // Fuerza a que los distintos ficheros se sirvan partiendo del directorio raiz /.
     // Si no se fuerza este comportamiento, al utilizar react-router y definir rutas,
     // webpack utilizara URLs relativas como /mi-ruta/main.js causando errores.
@@ -44,6 +52,9 @@ module.exports = {
       favicon: "./static/favicon.ico",
       filename: "index.html",
     }),
+    new DefinePlugin({
+      API_URL: JSON.stringify(apiURL),
+    }),
   ],
   // Por ahora, incluimos siempre los source maps para que las herramientas
   // de desarrollo del navegador muestren el codigo fuente
@@ -64,4 +75,12 @@ module.exports = {
       "/api": "http://localhost:3000",
     },
   },
+};
+
+module.exports = (_env, argv) => {
+  if (argv.mode === "production") {
+    config.devtool = "source-map";
+  }
+
+  return config;
 };

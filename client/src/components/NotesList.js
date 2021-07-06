@@ -24,7 +24,7 @@ const NotesList = () => {
 
 
   const fetchNotes = () => { 
-    fetch("/api/notes", {
+    fetch(API_URL+"/notes", {
       method: "GET",
       headers: {
         "Content-type": "application/json; charset=UTF-8",
@@ -37,7 +37,7 @@ const NotesList = () => {
   };
 
   const deleteNote = (id) => { 
-    fetch("/api/notes/"+id, {
+    fetch(API_URL+"/notes/"+id, {
       method: "DELETE",
       headers: {
         "api-token": user.token

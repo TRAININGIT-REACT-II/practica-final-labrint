@@ -29,7 +29,7 @@ const AddNote = () => {
   const onSubmitNote = (e) => {
     e.preventDefault();
     if(validarFormulario(formState.title,formState.content)){
-      fetch("/api/notes", {
+      fetch(API_URL+"/notes", {
         method: "POST",
         body: JSON.stringify({
           title: formState.title,
