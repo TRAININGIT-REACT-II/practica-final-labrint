@@ -1,0 +1,12 @@
+.login-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.login-ayuda-wrap{
+    margin: 2em 0 1em 0;
+}
+.login-ayuda-etiqueta{
+    font-size: small;
+}

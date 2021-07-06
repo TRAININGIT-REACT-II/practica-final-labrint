@@ -1,0 +1,21 @@
+.error-page h3{
+    font-size: xx-large;
+    text-align: center;
+}
+
+.error-page .icon{
+    color: black;
+    transform: rotate(90deg);
+    width: 2em;
+    height: 2em;
+    font-size: 10em;
+    border: 20px solid black;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #e5b004;
+}
+
+.error-page a{
+    text-align: center;
+    display: block;
+}

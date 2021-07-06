@@ -1,0 +1,12 @@
+.register-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.register-ayuda-wrap{
+    margin: 2em 0 1em 0;
+}
+.register-ayuda-etiqueta{
+    font-size: small;
+}

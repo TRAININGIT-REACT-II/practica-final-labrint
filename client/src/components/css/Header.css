@@ -1,0 +1,15 @@
+.header{
+    text-align: right;
+    font-size: small;
+}
+
+.header button.icon{
+    min-width: 0;
+    font-size: 2em;
+    width: 2em;
+    border-right:1px solid black;
+}
+
+.theme-dark .header button.icon{
+    border-right:1px solid white;
+}

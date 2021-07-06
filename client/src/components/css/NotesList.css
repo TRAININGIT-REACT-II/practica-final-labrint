@@ -1,0 +1,83 @@
+.noteslist{
+    height: calc(100vh - 32.5em);
+}
+
+.noteslist h3{
+    text-align: center;
+    background-color: white;
+    color: black;
+    border-bottom: 1px solid white;
+    text-transform: uppercase;
+    margin: 1em 0 0 0;
+    box-shadow: 0px -6px 12px -9px black
+}
+.noteslist h3>button.icon{
+    color: black;
+}
+
+.noteslist ul {
+    padding: 0 15%;
+    list-style: none;
+    height: 100%;
+    overflow-y: auto;
+}
+.block.noteslist ul {
+    padding: 0 3em;
+}
+.noteslist ul li{
+    border-bottom: 1px solid #c7c7c77a;
+}
+
+.block.noteslist ul li{
+    display: inline-block;
+    width: 10em;
+    height: 10em;
+    background-color: #f8db7d;
+    box-shadow: 0.15em 0.15em 0.25em #aaa;
+    margin:1em;
+    text-align: center;
+    color:black;
+}
+.noteslist ul li:hover{
+    background-color: #ffffff33;
+}
+.block.noteslist ul li:hover{
+    background-color: #f8db7d91;
+}
+.noteslist ul li .note-item{
+    display: inline-block;
+    width: calc(100% - 6em);
+    font-family: monospace;
+    font-size: 1.5em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.block.noteslist ul li .note-item{
+    width: 100%;
+    height: calc(100% - 2em);
+    padding: 0.5em;
+    white-space: normal;
+}
+
+.noteslist ul li button{
+    text-align: right;
+    position: relative;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 1px #00000080;
+}
+.noteslist ul li button:active{
+    text-shadow: none;
+    }
+.noteslist ul li button.delete{
+    color: #b00404;
+}
+.noteslist ul li button.edit{
+    color: #fff;
+}
+.noteslist ul li button.show{
+    color: #2e99ea;
+}
+
+
+

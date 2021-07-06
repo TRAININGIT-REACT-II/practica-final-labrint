@@ -1,0 +1,9 @@
+.footer {
+  font-size: xx-small;
+  margin: 1em 0;
+  text-align: center;
+}
+
+.wrap-notes+.footer{
+width:3em;
+}

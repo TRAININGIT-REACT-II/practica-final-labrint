@@ -1,8 +1,93 @@
 /* Fichero CSS global */
 * {
   box-sizing: border-box;
+  
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Hachi Maru Pop', cursive;
+  background-color: #ccdede;/*#e1ded6;*/
+}
+
+body.theme-dark{
+  background-color: black;
+  color:white;
+}
+
+button{
+  cursor: pointer;
+}
+
+button:not(.icon), .button:not(.icon){
+  background-color: #83b7ff;
+  padding: 0.5em 0.25em;
+  color: white;
+  min-width: 10em;
+  box-shadow: inset -2px -2px 5px -2px black;
+  border: none;
+  border-radius: 1.2em;
+  font-size: 1em;
+  font-variant-caps: normal;
+  font-family: 'Hachi Maru Pop', cursive;
+  text-align: center;
+  display: inline-block;
+  text-shadow: none;
+  font-style: normal;
+}
+
+button.acept:not(.icon){
+  background-color: #36ba56;
+}
+button.cancel:not(.icon){
+  background-color: #ba3636;
+}
+
+button.icon{
+  background: none;
+  border: none;
+  font-size: 2em;
+  margin: 0;
+  vertical-align: middle;
+  min-width: 0;
+  color:black;
+  position:relative;
+}
+
+.theme-dark button.icon{
+  color:white;
+}
+
+button:active,.button:active{
+  box-shadow: none;
+}
+
+button.icon:active{
+top:1px;
+}
+
+button:disabled{
+  background-color: #cfcfcf;
+  cursor: default;
+}
+
+a,a:visited{
+    text-decoration: none;
+    color: #1f7dff;
+    text-shadow: 0em 0.2em 0.25em #00000038;
+    font-style: italic;
+    font-size: small;
+}
+a:hover{
+  text-decoration: none;
+  color: #1f7dff;
+  text-shadow: none;
+  font-style: italic;
+}
+
+a:active{
+ color: #124d9e;
+}
+
+.ali-right{
+  text-align: right;
 }

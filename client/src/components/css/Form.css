@@ -1,0 +1,39 @@
+form{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.wrap-form{
+    display: inline-block;
+    margin: 1em;
+    border: 2px solid transparent;
+    border-radius: 0.25em;
+    padding: 0 1em 3em 1em;
+    box-shadow: 0.15em 0.15em 0.25em #aaa;
+    background-color:#f8db7d;
+    color:black;
+}
+.wrap-form h3{
+    border-bottom: 1px solid #ffffff70;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 0.5em;
+    margin:0.75em 0 1em 0
+}
+.wrap-form>div{
+    padding:0.75em 0;
+}
+form .wrap-form  label{
+    display:inline-block;
+    width:10em;
+    text-align: left;
+    font-weight: bold;
+    font-variant-caps: small-caps;
+}
+
+form .wrap-form  input{
+    display:inline-block;
+    width:15em;
+    padding:0.5em;
+}

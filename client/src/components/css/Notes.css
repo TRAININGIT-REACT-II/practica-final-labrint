@@ -1,0 +1,42 @@
+section.section-note{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.wrap-note{
+    display: inline-block;
+    margin: 1em;
+    border: 2px solid transparent;
+    border-radius: 0.25em;
+    padding: 0 1em 3em 1em;
+    box-shadow: 0.15em 0.15em 0.25em #aaa;
+    background-color:#f8db7d;
+    color:black;
+    width:30em;
+    min-height: 15em;
+}
+.wrap-note h3{
+    border-bottom: 1px solid #ffffff70;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 0.5em;
+    margin:0.75em 0 1em 0
+}
+.wrap-note h3 input{
+    width:100%;
+}
+
+.wrap-note>div{
+    padding:0.75em 0;
+}
+
+.wrap-note>div textarea{
+    width:100%;
+    height: 4em;
+}
+
+.botonera button{
+margin-right:1em;
+margin-left: 1em;;
+}

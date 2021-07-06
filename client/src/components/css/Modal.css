@@ -1,0 +1,74 @@
+.modal {
+  animation: slide-in .15s ease-in;
+  background-color: white;
+  box-shadow: 2px 2px 15px -3px rgba(0, 0, 0, 0.3);
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 50px auto 0;
+  max-width: 600px;
+  position: absolute;
+  top: 50px;
+  text-align: center;
+  padding: 2rem 2rem 1rem 2rem;
+  width: 100%;
+  will-change: transform;
+  z-index: 10;
+  color:black;
+}
+
+
+.modal-background {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100vw;
+  z-index: 9;
+}
+
+button.icon.modal-close {
+  border: 0;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: black !important;
+}
+
+button.icon.modal-close:active {
+  top: 16px;
+}
+
+.modal-hidden {
+  display: none;
+}
+
+.modal .botonera{
+  margin: 3em 0 1em 0em;
+}
+.modal .botonera button{
+  margin: 0 1em;
+}
+
+.modal .modal-title {
+  font-variant: small-caps;
+}
+
+.modal .modal-title.error {
+  color: red;
+}
+
+.negrita.monospace{
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.5em;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-50%) translateY(-20px);
+  }
+  100% {
+    transform:translateX(-50%)  translateY(0);
+  }
+}
